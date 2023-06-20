@@ -1,4 +1,5 @@
-(ns demo.popup)
+(ns demo.popup
+  (:require [foo :refer [bar]]))
 
 (defn set-alarm [event]
   (js/console.log "set-alarm" event)
@@ -23,6 +24,7 @@
   )
 
 (defn init []
+  (js/console.log (bar "fooooo"))
   (doseq [id ["sampleMinute" "min15" "min30"]]
     (-> (js/document.getElementById id)
         (.addEventListener "click" set-alarm)))
