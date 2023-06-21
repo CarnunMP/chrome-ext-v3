@@ -6,9 +6,11 @@ Clone this repo and run
 
 ```
 npm install
-npx shadow-cljs watch ext
+#npx shadow-cljs watch ext
+clj -M:shadow-cljs watch ext
 # or
-npx shadow-cljs release ext
+#npx shadow-cljs release ext
+clj -M:shadow-cljs release ext
 ```
 
 Then load the `ext` folder as an "Unpacked Extension" via [Chrome Extensions](chrome://extensions/).
